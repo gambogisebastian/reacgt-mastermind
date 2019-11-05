@@ -11,9 +11,18 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      selColorIdx: 2,
-      guesses: [],
+      selColorIdx: Math.floor(Math.random() * colors.length),
+      guesses: [this.getNewGess(), this.getNewGess()],
       code: this.genCode()
+    };
+  }
+  getNewGess() {
+    return {
+      code: [2, 3, 0, 1], //code: [null, null, null, null],
+      score: {
+        perfect: 0,
+        almost: 0
+      }
     };
   }
   genCode() {
@@ -37,11 +46,11 @@ class App extends Component {
         </button>
         Color selecionado: {colors[this.state.selColorIdx]}
         ____Código generado (dev-mode): {this.state.code}
-        <header className="App-header">Mente Maestra</header>
+        <header className="App-header">MENTE MAESTRA</header>
         <div className="Flex-ch">
-          <GameBoard />
+          <GameBoard colors={colors} guesses={this.state.guesses} />
           <div>
-            <ColorPicker colors={colors} />
+            <ColorPicker colors={colors} selColorIdx={this.state.selColorIdx} />
             <GameTimer />
             <NewGameButton />
           </div>
