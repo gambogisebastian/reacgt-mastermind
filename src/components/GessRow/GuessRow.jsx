@@ -7,7 +7,11 @@ const GessRow = props => (
   <div className="Flex-ch">
     <div>{props.rowIdx + 1}</div>
     <GessPegs colors={props.colors} code={props.guess.code} />
-    {props.currentGuess ? <ScoreButton /> : <GuessScore />}
+    {props.currentGuess ? (
+      <ScoreButton />
+    ) : (
+      <GuessScore score={props.guess.score} />
+    )}
   </div>
 );
 

@@ -5,23 +5,22 @@
 .App-header {
   background-color: #222;
   height: 40px;
-  padding: 20px;
+  padding: 8px;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
 }
 
 .App-footer {
   background-color: #444;
   height: 40px;
-  padding: 20px;
+  padding: 10px;
   color: white;
-  font-size: 30px;
+  font-size: 15px;
   text-align: center;
 }
 
 .Flex-ch {
   display: flex;
   justify-content: center;
-  background-color: DodgerBlue;
 }

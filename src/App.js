@@ -30,7 +30,15 @@ class App extends Component {
       .fill()
       .map(() => Math.floor(Math.random() * colors.length));
   }
+  getWinTries() {
+    //si es ganador, devuelve el num guesses, de lo contrario, 0 (no ganador)
+    let lastGuess = this.state.guesses.length - 1;
+    return this.state.guesses[lastGuess].score.perfect === 4
+      ? lastGuess + 1
+      : 0;
+  }
   render() {
+    let winTries = this.getWinTries();
     return (
       <div className="App">
         <button
@@ -55,7 +63,9 @@ class App extends Component {
             <NewGameButton />
           </div>
         </div>
-        <footer className="App-footer">footer</footer>
+        <footer className="App-footer">
+          {winTries ? `Usted ganó en ${winTries} intentos` : "¡Buena suerte!"}
+        </footer>
       </div>
     );
   }
