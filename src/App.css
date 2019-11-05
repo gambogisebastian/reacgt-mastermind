@@ -19,3 +19,9 @@
   font-size: 30px;
   text-align: center;
 }
+
+.Flex-ch {
+  display: flex;
+  justify-content: center;
+  background-color: DodgerBlue;
+}
