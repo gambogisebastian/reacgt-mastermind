@@ -22,5 +22,10 @@
 
 .Flex-ch {
   display: flex;
-  justify-content: center;
+}
+
+.component {
+  border: 2px dotted red;
+  margin: 4px;
+  padding: 4px;
 }

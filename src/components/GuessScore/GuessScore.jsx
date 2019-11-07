@@ -1,4 +1,5 @@
 import React from "react";
+import './GuessScore.css'
 
 const GuessScore = ({ score }) => {
   //convierte el objeto score en un arreglo de 4 caracteres
@@ -8,7 +9,7 @@ const GuessScore = ({ score }) => {
     "I".repeat(4 - score.perfect - score.almost)
   ).split("");
   return (
-    <div>
+    <div className="GuessScore">
       {scores.map((score, idx) => (
         <div key={idx}>{score}</div>
       ))}
