@@ -10,14 +10,14 @@ const GuessScore = ({ score }) => {
   ).split("");
 
   const baseStyle = {
-    with: 10,
+    width: 10,
     height: 10,
     margin: 1,
-    border: "1px solid",
+    border: "2px solid",
     borderRadius: "50%"
   };
 
-  const pegStyle = {
+  const pegStyles = {
     P: {
       borderColor: "black",
       backgroundColor: "black"
@@ -35,7 +35,7 @@ const GuessScore = ({ score }) => {
   return (
     <div className="GuessScore">
       {scores.map((score, idx) => (
-        <div key={idx} style={baseStyle} />
+        <div key={idx} style={{ ...baseStyle, ...pegStyles[score] }} />
       ))}
     </div>
   );

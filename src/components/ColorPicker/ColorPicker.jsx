@@ -1,12 +1,15 @@
 import React from "react";
+import "./ColorPicker.css";
 
 const ColorPicker = props => (
-  <div className="component">
+  <div className="Component">
     Color seleccionado: {props.selColorIdx}
     {props.colors.map(color => (
-      <button className="btn btn-default" key={color}>
-        {color}
-      </button>
+      <button
+        className="ColorPicker"
+        key={color}
+        style={{ backgroundColor: color, borderColor: color }}
+      ></button>
     ))}
   </div>
 );
