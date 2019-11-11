@@ -5,7 +5,7 @@ import ScoreButton from "../ScoreButton/ScoreButton";
 
 const GessRow = props => (
   <div className="Flex-ch">
-    <div style={{ color: props.currentGuess ? "black" : "lightgrey" }}>
+    <div style={{ color: props.currentGuess ? "black" : "grey" }}>
       {props.rowIdx + 1}
     </div>
     <GessPegs colors={props.colors} code={props.guess.code} />

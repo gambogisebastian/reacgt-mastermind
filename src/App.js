@@ -12,7 +12,12 @@ class App extends Component {
     super();
     this.state = {
       selColorIdx: Math.floor(Math.random() * colors.length),
-      guesses: [this.getNewGess(), this.getNewGess()],
+      guesses: [
+        this.getNewGess(),
+        this.getNewGess(),
+        this.getNewGess(),
+        this.getNewGess()
+      ],
       code: this.genCode()
     };
   }

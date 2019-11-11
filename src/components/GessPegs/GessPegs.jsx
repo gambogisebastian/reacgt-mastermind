@@ -1,13 +1,13 @@
 import React from "react";
-import GessPeg from "../GessPeg/GessPeg";
-import './GessPegs.css'
+import GuessPeg from "../GuessPeg/GuessPeg";
+import "./GessPegs.css";
 
 const GessPegs = props => (
   <div className="GuessPegs">
-    <GessPeg color={props.colors[props.code[0]]} />
-    <GessPeg color={props.colors[props.code[1]]} />
-    <GessPeg color={props.colors[props.code[2]]} />
-    <GessPeg color={props.colors[props.code[3]]} />
+    <GuessPeg color={props.colors[props.code[0]]} />
+    <GuessPeg color={props.colors[props.code[1]]} />
+    <GuessPeg color={props.colors[props.code[2]]} />
+    <GuessPeg color={props.colors[props.code[3]]} />
   </div>
 );
 

@@ -1,6 +1,6 @@
 .GuessPegs {
-    display: flex;
-    align-items: center;
-    text-emphasis: rosybrown;
-    border: 2px dotted black;
+  display: flex;
+  align-items: center;
+  border: 1px dotted lightpink;
+  background-color: #eeeeff;
 }

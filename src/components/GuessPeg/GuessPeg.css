@@ -1,7 +1,7 @@
-.ColorPicker {
+.GuessPeg {
   width: 40px;
   height: 40px;
-  margin: 1px;
-  border: 10px solid;
+  margin: 5px;
+  border-width: 14px;
   border-radius: 50%;
 }

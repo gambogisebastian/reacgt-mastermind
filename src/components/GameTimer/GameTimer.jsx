@@ -1,9 +1,13 @@
-import React from 'react';
+import React from "react";
 
-const GameTimer = (props) => (
-    <div className='component'>
-        GAMEtimer
-    </div>
-);
+const GameTimer = props => {
+  const baseStyle = {
+    fontFamily: "Roboto, monospace",
+    fontSize: 40,
+    backgroundColor: "#eeffee"
+  };
 
-export default GameTimer
+  return <div style={baseStyle}>00:00</div>;
+};
+
+export default GameTimer;
