@@ -23,7 +23,6 @@
 .Flex-ch {
   display: flex;
   justify-content: center;
-  align-items: center;
   margin: 4px;
   padding: 4px;
   border: 1px dotted lightslategray;

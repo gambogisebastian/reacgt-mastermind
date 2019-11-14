@@ -3,7 +3,7 @@ import styles from "./ColorPicker.module.css";
 
 const ColorPicker = props => (
   <div className={styles.coluna}>
-    Color: {props.selColorIdx}
+    Color selecionado: {props.selColorIdx}
     {props.colors.map((color, idx) => (
       <button
         className={`${styles.button}`}
@@ -12,7 +12,8 @@ const ColorPicker = props => (
           backgroundColor: props.selColorIdx === idx ? "white" : color,
           borderColor: color
         }}
-      ></button>
+        onClick={props.handleColorSelection}
+      />
     ))}
   </div>
 );

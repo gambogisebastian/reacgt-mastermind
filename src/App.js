@@ -12,18 +12,14 @@ class App extends Component {
     super();
     this.state = {
       selColorIdx: Math.floor(Math.random() * colors.length),
-      guesses: [
-        this.getNewGess(),
-        this.getNewGess(),
-        this.getNewGess(),
-        this.getNewGess()
-      ],
+      guesses: [this.getNewGess()],
       code: this.genCode()
     };
   }
   getNewGess() {
     return {
-      code: [2, 3, 0, 1], //code: [null, null, null, null],
+      //code: [1, 2, 3, 0],
+      code: [null, null, null, null],
       score: {
         perfect: 0,
         almost: 0
@@ -41,6 +37,10 @@ class App extends Component {
     return this.state.guesses[lastGuess].score.perfect === 4
       ? lastGuess + 1
       : 0;
+  }
+
+  handleColorSelection() {
+    alert("el manejador de colores ha sido seleccionado");
   }
   render() {
     let winTries = this.getWinTries();
@@ -63,7 +63,11 @@ class App extends Component {
         <div className="Flex-ch">
           <GameBoard colors={colors} guesses={this.state.guesses} />
           <div>
-            <ColorPicker colors={colors} selColorIdx={this.state.selColorIdx} />
+            <ColorPicker
+              colors={colors}
+              selColorIdx={this.state.selColorIdx}
+              handleColorSelection={this.handleColorSelection}
+            />
             <GameTimer />
             <NewGameButton />
           </div>

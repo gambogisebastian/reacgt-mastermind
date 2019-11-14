@@ -8,7 +8,11 @@ const GessRow = props => (
     <div style={{ color: props.currentGuess ? "black" : "grey" }}>
       {props.rowIdx + 1}
     </div>
-    <GessPegs colors={props.colors} code={props.guess.code} />
+    <GessPegs
+      colors={props.colors}
+      code={props.guess.code}
+      currentGuess={props.currentGuess}
+    />
     {props.currentGuess ? (
       <ScoreButton />
     ) : (
