@@ -15,6 +15,7 @@ class App extends Component {
       guesses: [this.getNewGess()],
       code: this.genCode()
     };
+    //this.handleColorSelection = this.handleColorSelection.bind(this); //para corregir el llamado de this desde el color picker que se encabrona porque lo llama desde un objeto
   }
   getNewGess() {
     return {
@@ -39,9 +40,14 @@ class App extends Component {
       : 0;
   }
 
-  handleColorSelection() {
-    alert("el manejador de colores ha sido seleccionado");
-  }
+  // si el método se va a ejecutar desde un componente hijo, hay que hacer lo siguiente
+  handleColorSelection = colorIdx => {
+    //artilujio que transforma el metodo en una función flecha porque lo inicializa el constructor
+    //alert(`indice de color seleccionado`);
+    debugger;
+    this.setState({ selColorIdx: colorIdx }); // el this keyword hace bardo porque se llama desde un objeto del comnponente hijo
+  };
+
   render() {
     let winTries = this.getWinTries();
     return (
