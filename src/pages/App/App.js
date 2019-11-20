@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import GameBoard from "./components/GameBoard/GameBoard";
-import ColorPicker from "./components/ColorPicker/ColorPicker";
-import GameTimer from "./components/GameTimer/GameTimer";
-import NewGameButton from "./components/NewGameButton/NewGameButton";
+import { Route, Switch } from "react-router-dom";
+import GamePage from "../GamePage/GamePage";
 
 const colors = ["#7CCCE5", "#FDE47F", "#E04644", "#B576AD"];
 
@@ -44,7 +42,7 @@ class App extends Component {
   handleColorSelection = colorIdx => {
     //artilujio que transforma el metodo en una función flecha porque lo inicializa el constructor
     //alert(`indice de color seleccionado`);
-    debugger;
+    //debugger;
     this.setState({ selColorIdx: colorIdx }); // el this keyword hace bardo porque se llama desde un objeto del comnponente hijo
   };
 
@@ -66,21 +64,24 @@ class App extends Component {
         Color selecionado: {colors[this.state.selColorIdx]}
         ____Código generado (dev-mode): {this.state.code}
         <header className="App-header">MENTE MAESTRA</header>
-        <div className="Flex-ch">
-          <GameBoard colors={colors} guesses={this.state.guesses} />
-          <div>
-            <ColorPicker
-              colors={colors}
-              selColorIdx={this.state.selColorIdx}
-              handleColorSelection={this.handleColorSelection}
-            />
-            <GameTimer />
-            <NewGameButton />
-          </div>
-        </div>
-        <footer className="App-footer">
-          {winTries ? `Usted ganó en ${winTries} intentos` : "¡Buena suerte!"}
-        </footer>
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <GamePage
+                winTries={winTries}
+                colors={colors}
+                selColorIdx={this.state.selColorIdx}
+                guesses={this.state.guesses}
+                handleColorSelection={this.handleColorSelection}
+                handleNewGameClick={this.handleNewGameClick}
+                handlePegClick={this.handlePegClick}
+                handleScoreClick={this.handleScoreClick}
+              />
+            )}
+          />
+        </Switch>
       </div>
     );
   }
