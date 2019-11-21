@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import GamePage from "../GamePage/GamePage";
+import SettingsPage from "../SettingsPage/SetingsPage";
 
 const colors = ["#7CCCE5", "#FDE47F", "#E04644", "#B576AD"];
 
@@ -63,7 +64,7 @@ class App extends Component {
         </button>
         Color selecionado: {colors[this.state.selColorIdx]}
         ____Código generado (dev-mode): {this.state.code}
-        <header className="App-header">MENTE MAESTRA</header>
+        <header className="App-header">M E N T E &nbsp;&nbsp;&nbsp; M A E S T R A</header>
         <Switch>
           <Route
             exact
@@ -81,6 +82,9 @@ class App extends Component {
               />
             )}
           />
+          <Route exact path="/Settings" render={(props) => (
+            <SettingsPage {...props}/>
+          )}/>
         </Switch>
       </div>
     );

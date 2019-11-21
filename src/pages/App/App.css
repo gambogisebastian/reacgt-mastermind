@@ -3,19 +3,19 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: #efe;
   height: 40px;
   padding: 8px;
-  color: white;
+  color: #888;
   font-size: 20px;
   text-align: center;
 }
 
 .App-footer {
-  background-color: #444;
+  background-color: #111;
   height: 40px;
   padding: 10px;
-  color: white;
+  color: #efe;
   font-size: 15px;
   text-align: center;
 }

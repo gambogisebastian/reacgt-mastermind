@@ -1,0 +1,8 @@
+.GamePage-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.GamePage-Link-margin {
+    margin-bottom: 10px;
+}
