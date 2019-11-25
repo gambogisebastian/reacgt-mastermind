@@ -1,29 +1,8 @@
-.App {
-  text-align: center;
-}
-
 .App-header {
   background-color: #efe;
   height: 40px;
   padding: 8px;
-  color: #888;
+  color: #e88;
   font-size: 20px;
   text-align: center;
-}
-
-.App-footer {
-  background-color: #111;
-  height: 40px;
-  padding: 10px;
-  color: #efe;
-  font-size: 15px;
-  text-align: center;
-}
-
-.Flex-ch {
-  display: flex;
-  justify-content: center;
-  margin: 4px;
-  padding: 4px;
-  border: 1px dotted lightslategray;
 }

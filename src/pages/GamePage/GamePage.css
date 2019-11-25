@@ -1,8 +1,29 @@
+.GamePage {
+  text-align: center;
+}
+
+.GamePage-footer {
+  background-color: #fee;
+  height: 40px;
+  padding: 10px;
+  color: #88e;
+  font-size: 15px;
+  text-align: center;
+}
+
+.Flex-ch {
+  display: flex;
+  justify-content: center;
+  margin: 4px;
+  padding: 4px;
+  border: 1px dotted #8e8;
+}
+
 .GamePage-menu {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .GamePage-Link-margin {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }

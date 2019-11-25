@@ -1,15 +1,14 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import GameBoard from "../../components/GameBoard/GameBoard";
 import ColorPicker from "../../components/ColorPicker/ColorPicker";
 import GameTimer from "../../components/GameTimer/GameTimer";
 import NewGameButton from "../../components/NewGameButton/NewGameButton";
-import './GamePage.css';
-
+import "./GamePage.css";
 
 const GamePage = props => {
   return (
-    <div className="App">
+    <div className="GamePage">
       <div className="Flex-ch">
         <GameBoard
           colors={props.colors}
@@ -23,17 +22,17 @@ const GamePage = props => {
             selColorIdx={props.selColorIdx}
             handleColorSelection={props.handleColorSelection}
           />
-          <GameTimer />
-          <Link
-            className='btn btn-default GamePage-Link-margin'
-            to='/settings'
-          >
+          <GameTimer
+            elapsedTime={props.elapsedTime}
+            handleTimerUpdate={props.handleTimerUpdate}
+          />
+          <Link className="btn btn-default GamePage-Link-margin" to="/settings">
             Nivel de dificultad
           </Link>
           <NewGameButton />
         </div>
       </div>
-      <footer className="App-footer">
+      <footer className="GamePage-footer">
         {props.winTries
           ? `Usted ganó en ${props.winTries} intentos`
           : "¡Buena suerte!"}
